@@ -18,8 +18,12 @@
 #ifndef CONFIG_IDF_TARGET_ESP32C5
 #include "hal/clk_gate_ll.h"
 #endif
+#if __has_include("esp32-hal-periman.h")
 #include "esp32-hal-periman.h"
+#endif
+#if __has_include("esp_private/periph_ctrl.h")
 #include "esp_private/periph_ctrl.h"
+#endif
 
 #include "esp_system.h"
 #include "esp_intr_alloc.h"
